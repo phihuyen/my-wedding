@@ -48,28 +48,6 @@ const config = {
         // Google Maps link for location (short clickable link)
         maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
       },
-      {
-        // First event name
-        title: "Tiệc áp rạp nhà Trai",
-        date: "2025-11-22",
-        startTime: "16:00",
-        endTime: "19:00",
-        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
-        address: "Nhà văn hóa thôn Thái Khê",
-        // Google Maps link for location (short clickable link)
-        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
-      },
-      {
-        // First event name
-        title: "Tiệc cưới nhà Trai",
-        date: "2025-11-23",
-        startTime: "09:00",
-        endTime: "12:00",
-        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
-        address: "Nhà văn hóa thôn Thái Khê",
-        // Google Maps link for location (short clickable link)
-        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
-      },
     ],
 
     // Background music settings

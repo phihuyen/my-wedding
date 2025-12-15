@@ -85,7 +85,7 @@ const CalendarButton = ({icon: Icon, label, onClick, className = ""}) => (
  *
  * @returns {JSX.Element} A JSX element representing the event card.
  */
-const SingleEventCard = ({eventData}) => {
+const SingleEventCard = ({eventData = {}}) => {
   const [showCalendarModal, setShowCalendarModal] = useState(false);
 
   const googleCalendarLink = () => {
@@ -141,7 +141,7 @@ END:VCALENDAR`;
       >
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-semibold text-gray-800">
-            {eventData.title.split(" - ")[0]}
+            {eventData?.title && eventData.title.split(" - ")[0]}
           </h3>
           <motion.button
             whileHover={{scale: 1.05}}
@@ -155,26 +155,26 @@ END:VCALENDAR`;
         <div className="space-y-3 text-gray-600">
           <div className="flex items-center space-x-3">
             <Calendar className="w-5 h-5 text-rose-500" />
-            <span>{formatEventDate(eventData.date)}</span>
+            <span>{formatEventDate(eventData?.date)}</span>
           </div>
           <div className="flex items-center space-x-3">
             <Clock className="w-5 h-5 text-rose-500" />
             <span>
-              {eventData.startTime} - {eventData.endTime}
+              {eventData?.startTime} - {eventData?.endTime}
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <Locate className="w-5 h-5 text-rose-500" />
-            <span>{eventData.address}</span>
+            <span>{eventData?.address}</span>
           </div>
           <div className="flex items-center space-x-3">
             <MapPin className="w-5 h-5 text-rose-500" />
-            <span>{eventData.location}</span>
+            <span>{eventData?.location}</span>
           </div>
           {/* Action Button - Full Width */}
           <div className="pt-4">
             <motion.a
-              href={eventData.maps_url}
+              href={eventData?.maps_url}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{scale: 1.02}}
@@ -243,9 +243,10 @@ END:VCALENDAR`;
 const EventCards = ({events}) => {
   return (
     <div className="space-y-4">
-      {events.map((event, index) => (
-        <SingleEventCard key={index} eventData={event} />
-      ))}
+      {events?.length > 0 &&
+        events.map((event, index) => (
+          <SingleEventCard key={index} eventData={event || {}} />
+        ))}
     </div>
   );
 };
