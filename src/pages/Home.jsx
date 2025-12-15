@@ -176,11 +176,11 @@ export default function Hero() {
               >
                 NHÀ GÁI <br />
                 {config.data.parentBride.dad && (
-                  <span className="font-light whitespace-nowrap">
+                  <span className="font-light whitespace-nowrap relative">
                     Ông: {config.data.parentBride.dad}
                     {config.data.parentBride.dad_more && (
-                      <span className="text-xs text-gray-400">
-                        &nbsp;({config.data.parentBride.dad_more})
+                      <span className="absolute -top-1 -right-7 bottom-1 text-[8px] text-gray-500 leading-none">
+                        ({config.data.parentBride.dad_more})
                       </span>
                     )}
                   </span>
