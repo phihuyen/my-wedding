@@ -79,6 +79,24 @@ const venues = {
     // List of event agenda/schedule
     agenda: [
       {
+        title: "Tiệc vu quy",
+        date: "2026-01-07",
+        startTime: "09:30",
+        endTime: "11:00",
+        location: "Tư gia nhà gái, cạnh chùa Hoà An, xã Hợp Đức",
+        address: "Thôn Hoà An, xã Hợp Đức, huyện Tân Yên, tỉnh Bắc Giang (cũ)",
+        maps_url: "https://maps.app.goo.gl/eTE7XYQL5Ecorkam7",
+      },
+      {
+        title: "Lễ vu quy",
+        date: "2026-01-07",
+        startTime: "11:00",
+        endTime: "12:00",
+        location: "Tư gia nhà gái, cạnh chùa Hoà An, xã Hợp Đức",
+        address: "Thôn Hoà An, xã Hợp Đức, huyện Tân Yên, tỉnh Bắc Giang (cũ)",
+        maps_url: "https://maps.app.goo.gl/eTE7XYQL5Ecorkam7",
+      },
+      {
         // Event name
         title: "Lễ thành hôn",
         date: "2026-01-07",
@@ -91,7 +109,7 @@ const venues = {
       },
       {
         // Event name
-        title: "Tiệc cưới nhà Trai",
+        title: "Tiệc thành hôn",
         date: "2026-01-07",
         startTime: "16:00",
         endTime: "19:00",
@@ -112,7 +130,7 @@ const venues = {
     address: "Thôn Hoà An, xã Hợp Đức, huyện Tân Yên, tỉnh Bắc Giang (cũ)",
     agenda: [
       {
-        title: "Tiệc cưới nhà Gái",
+        title: "Tiệc vu quy",
         date: "2026-01-07",
         startTime: "09:30",
         endTime: "11:00",
@@ -128,6 +146,28 @@ const venues = {
         location: "Tư gia nhà gái, cạnh chùa Hoà An, xã Hợp Đức",
         address: "Thôn Hoà An, xã Hợp Đức, huyện Tân Yên, tỉnh Bắc Giang (cũ)",
         maps_url: "https://maps.app.goo.gl/eTE7XYQL5Ecorkam7",
+      },
+      {
+        // Event name
+        title: "Lễ thành hôn",
+        date: "2026-01-07",
+        startTime: "15:00",
+        endTime: "16:00",
+        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
+        address: "Nhà văn hóa thôn Thái Khê",
+        // Google Maps link for location (short clickable link)
+        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
+      },
+      {
+        // Event name
+        title: "Tiệc thành hôn",
+        date: "2026-01-07",
+        startTime: "16:00",
+        endTime: "19:00",
+        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
+        address: "Nhà văn hóa thôn Thái Khê",
+        // Google Maps link for location (short clickable link)
+        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
       },
     ],
   },

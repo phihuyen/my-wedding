@@ -141,59 +141,73 @@ export default function Hero() {
               Lễ thành hôn của (con) chúng tôi
             </motion.p>
 
-            <motion.h2
+            <motion.div
               initial={{scale: 0.8, opacity: 0}}
               animate={{scale: 1, opacity: 1}}
               transition={{delay: 0.6}}
-              className="pt-4 pb-4 text-3xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600"
+              className="pt-4 pb-4 w-full max-w-md mx-auto flex flex-col gap-0"
             >
-              {config.data.groomName} & {config.data.brideName}
-            </motion.h2>
-
-            {/* Parents Info Row */}
-            <motion.div className="flex flex-row justify-between text-gray-600 font-medium text-sm italic">
-              <motion.p
-                initial={{opacity: 0, x: -30}}
-                animate={{opacity: 1, x: 0}}
-                transition={{delay: 0.3}}
-                className="flex-1 text-center"
-              >
-                NHÀ TRAI <br />
-                <span className="font-light">
-                  Ông: {config.data.parentGroom.dad}
+              <div className="w-full text-left pl-3">
+                <h2 className="inline-block px-1 text-3xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600 leading-tight break-words">
+                  {config.data.groomName}
+                </h2>
+              </div>
+              <div className="w-full flex justify-center">
+                <span className="text-2xl font-serif text-rose-400 mr-6 px-1">
+                  &
                 </span>
-                <br />
-                <span className="font-light">
-                  Bà: {config.data.parentGroom.mom}
-                </span>
-              </motion.p>
-
-              <motion.p
-                initial={{opacity: 0, x: -30}}
-                animate={{opacity: 1, x: 0}}
-                transition={{delay: 0.3}}
-                className="flex-1 text-center"
-              >
-                NHÀ GÁI <br />
-                {config.data.parentBride.dad && (
-                  <span className="font-light whitespace-nowrap relative">
-                    Ông: {config.data.parentBride.dad}
-                    {config.data.parentBride.dad_more && (
-                      <span className="absolute -top-1 -right-7 bottom-1 text-[8px] text-gray-500 leading-none">
-                        ({config.data.parentBride.dad_more})
-                      </span>
-                    )}
-                  </span>
-                )}
-                <br />
-                {config.data.parentBride.mom && (
-                  <span className="font-light">
-                    Bà: {config.data.parentBride.mom}
-                  </span>
-                )}
-              </motion.p>
+              </div>
+              <div className="w-full text-right pr-1">
+                <h2 className="inline-block px-1 text-3xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600 leading-tight break-words">
+                  {config.data.brideName}
+                </h2>
+              </div>
             </motion.div>
           </div>
+
+          {/* Parents Info Row */}
+          <motion.div className="flex flex-row justify-between text-gray-600 font-medium text-sm italic mt-4">
+            <motion.p
+              initial={{opacity: 0, x: -30}}
+              animate={{opacity: 1, x: 0}}
+              transition={{delay: 0.3}}
+              className="flex-1 text-center"
+            >
+              NHÀ TRAI <br />
+              <span className="font-light">
+                Ông: {config.data.parentGroom.dad}
+              </span>
+              <br />
+              <span className="font-light">
+                Bà: {config.data.parentGroom.mom}
+              </span>
+            </motion.p>
+
+            <motion.p
+              initial={{opacity: 0, x: -30}}
+              animate={{opacity: 1, x: 0}}
+              transition={{delay: 0.3}}
+              className="flex-1 text-center"
+            >
+              NHÀ GÁI <br />
+              {config.data.parentBride.dad && (
+                <span className="font-light whitespace-nowrap relative">
+                  Ông: {config.data.parentBride.dad}
+                  {config.data.parentBride.dad_more && (
+                    <span className="absolute -top-1 -right-7 bottom-1 text-[8px] text-gray-500 leading-none">
+                      ({config.data.parentBride.dad_more})
+                    </span>
+                  )}
+                </span>
+              )}
+              <br />
+              {config.data.parentBride.mom && (
+                <span className="font-light">
+                  Bà: {config.data.parentBride.mom}
+                </span>
+              )}
+            </motion.p>
+          </motion.div>
 
           <motion.div
             initial={{y: 20, opacity: 0}}
