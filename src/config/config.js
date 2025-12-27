@@ -22,6 +22,7 @@ const baseData = {
   },
   // Wedding date (format: YYYY-MM-DD)
   date: "2026-01-07",
+  lunarDate: "19/11 năm Ất Tỵ",
   // Image that appears when link is shared on social media
   ogImage: "./images/anh-5.jpg",
   // Icon that appears in browser tab
@@ -63,6 +64,47 @@ const baseData = {
 
 // Venue-specific configurations
 const venues = {
+  "bo-me": {
+    // Google Maps link for location (short clickable link)
+    maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
+    // Google Maps embed code to display map on website
+    // How to get: open Google Maps → select location → Share → Embed → copy link
+    maps_embed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.7181347589595!2d105.60678145809972!3d20.962750080789895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313451006484676f%3A0xb57395fb4b9b7cff!2zTmjDoCBWxINuIEjDs2EgVGjDtG4gVGjDoWkgS2jDqg!5e0!3m2!1sen!2s!4v1765699865107!5m2!1sen!2s",
+    // Event time (free format, example: "10:00 - 12:00 WIB")
+    time: "10:30 - 12:00",
+    // Venue/building name
+    location: "Nhà văn hóa thôn Thái Khê",
+    // Full address of the wedding venue
+    address: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
+    // List of event agenda/schedule
+    agenda: [
+      {
+        // Event name
+        title: "Lễ thành hôn",
+        date: "2026-01-07",
+        startTime: "14:00",
+        endTime: "15:00",
+        lunarDate: "19/11 năm Ất Tỵ",
+        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
+        address: "Nhà văn hóa thôn Thái Khê",
+        // Google Maps link for location (short clickable link)
+        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
+      },
+      {
+        // Event name
+        title: "Tiệc thành hôn tại nhà Trai",
+        date: "2026-01-07",
+        startTime: "16:00",
+        endTime: "19:00",
+        lunarDate: "19/11 năm Ất Tỵ",
+        location: "Thôn Thái Khê, Xã Kiều Phú, Hà Nội",
+        address: "Nhà văn hóa thôn Thái Khê",
+        // Google Maps link for location (short clickable link)
+        maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",
+      },
+    ],
+  },
   "nha-trai": {
     // Google Maps link for location (short clickable link)
     maps_url: "https://maps.app.goo.gl/1VxiDfVHUDgS86aK7",

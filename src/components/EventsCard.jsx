@@ -158,6 +158,10 @@ END:VCALENDAR`;
             <span>{formatEventDate(eventData?.date)}</span>
           </div>
           <div className="flex items-center space-x-3">
+            <div className="w-5 h-5 text-rose-500" />
+            <span>Tức ngày {eventData?.lunarDate}</span>
+          </div>
+          <div className="flex items-center space-x-3">
             <Clock className="w-5 h-5 text-rose-500" />
             <span>
               {eventData?.startTime} - {eventData?.endTime}

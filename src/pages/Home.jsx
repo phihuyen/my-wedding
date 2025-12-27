@@ -153,7 +153,7 @@ export default function Hero() {
                 </h2>
               </div>
               <div className="w-full flex justify-center">
-                <span className="text-2xl font-serif text-rose-400 mr-6 px-1">
+                <span className="text-2xl font-serif text-rose-400 mr-[45px] px-1">
                   &
                 </span>
               </div>
@@ -228,11 +228,16 @@ export default function Hero() {
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{delay: 0.9}}
-                    className="flex items-center justify-center space-x-2"
+                    className="space-x-2"
                   >
-                    <Calendar className="w-4 h-4 text-rose-400" />
+                    <div className="flex items-center justify-center space-x-2">
+                      <Calendar className="w-4 h-4 text-rose-400" />
+                      <span className="text-gray-700 font-medium">
+                        {formatEventDate(config.data.date, "full")}
+                      </span>
+                    </div>
                     <span className="text-gray-700 font-medium">
-                      {formatEventDate(config.data.date, "full")}
+                      Tức ngày {config.data.lunarDate}
                     </span>
                   </motion.div>
 
