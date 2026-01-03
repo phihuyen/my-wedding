@@ -77,18 +77,27 @@ export default function Wishes() {
       venue,
     };
     try {
-      console.log("Sending wish data:", API_URL); // Debug log
+      console.log("Sending wish data: FOR TEST"); // Debug log
+
+      // In production (GitHub Pages) CORS is enforced and Google Apps Script web apps
+      // often don't handle CORS preflight (OPTIONS) for `application/json` POSTs.
+      //
+      // If your Apps Script expects JSON, the trick is:
+      // - Send a JSON STRING body
+      // - Use Content-Type: text/plain (a "simple" request -> no preflight)
+      // - In prod, `no-cors` ensures the browser won't block the send; response is opaque
+      const body = JSON.stringify(wishData);
 
       const response = await fetch(API_URL, {
         method: "POST",
-        redirect: "follow",
+        ...(import.meta.env.DEV ? {} : {mode: "no-cors"}),
         headers: {
-          "Content-Type": "application/json", // Change to JSON content type
+          "Content-Type": "text/plain;charset=UTF-8",
         },
-        body: JSON.stringify(wishData),
+        body,
       });
 
-      if (!response.ok) {
+      if (import.meta.env.DEV && !response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       // Refetch wishes after submit
